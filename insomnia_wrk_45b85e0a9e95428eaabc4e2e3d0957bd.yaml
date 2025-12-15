@@ -1,10 +1,10 @@
 type: collection.insomnia.rest/5.0
 schema_version: "5.1"
-name: Fabr-api spam
+name: Fabr-api
 meta:
   id: wrk_45b85e0a9e95428eaabc4e2e3d0957bd
   created: 1764940425755
-  modified: 1764940425755
+  modified: 1765795859692
   description: ""
 collection:
   - url: http://localhost:8081/fabr/getSequence
