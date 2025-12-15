@@ -1,17 +1,17 @@
 type: environment.insomnia.rest/5.0
 schema_version: "5.1"
-name: My Environment
+name: Env_Insom
 meta:
-  id: wrk_bdeec7c7b5e94b74aa123577b2936628
-  created: 1760357128487
-  modified: 1760357128487
+  id: wrk_f147202a27d249a3a6424253c70ef049
+  created: 1765804902367
+  modified: 1765806394309
   description: ""
 environments:
-  name: Fabr
+  name: Fabr tariff
   meta:
-    id: env_09334b935bcaef0670cce3bc224bf53d2ac502ca
+    id: env_83f3b370a4054df5a136ffb1b6968fd6
     created: 1760357128489
-    modified: 1764152257284
+    modified: 1765807400527
     isPrivate: false
   data:
     fabrUrl: https://fabrtech.ru

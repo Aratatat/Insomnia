@@ -486,12 +486,12 @@ collection:
             send: true
             store: true
           rebuildPath: true
-      - url: https://xn--e1akshg.xn--p1ai/api/gateway/v1/supplier-offers/1386fbc3-4825-40ce-bd86-e5ac13c5d693
+      - url: https://xn--e1akshg.xn--p1ai/api/gateway/v1/supplier-offers/91261ede-8d88-4f98-9f5c-fb4482ba4699
         name: Удаление предложение ЕККТ
         meta:
           id: req_260b3f01e1bb4e518ea4f645f8460a23
           created: 1765794446336
-          modified: 1765794446336
+          modified: 1765807109228
           isPrivate: false
           description: ""
           sortKey: -1765794444253
@@ -510,23 +510,23 @@ collection:
             send: true
             store: true
           rebuildPath: true
-      - url: https://xn--e1akshg.xn--p1ai/api/gateway/v1/supplier-offers/by-organization/1027700132195
+      - url: https://xn--e1akshg.xn--p1ai/api/gateway/v1/supplier-offers/by-organization/{{inn}}?isActive=true
         name: Получение предложений
         meta:
           id: req_f7c0078fe3de4484a272736fc3f1963c
           created: 1765794446336
-          modified: 1765794446336
+          modified: 1765810843810
           isPrivate: false
           description: ""
           sortKey: -1765794444254
         method: GET
         body:
           mimeType: application/json
-          text: "{\r
-
-            \    \"uintru\":\"UINTRU_1761077561931929597\"\r
-
-            }"
+          text: |-
+            {
+                //"uintru":"UINP.07.11.06.007.00001",
+            		//"isActive": false
+            }
         parameters:
           - name: organizationId
             value: "1027700132195"
@@ -677,6 +677,43 @@ collection:
             send: true
             store: true
           rebuildPath: true
+      - url: https://xn--e1akshg.xn--p1ai/api/gateway/v1/supplier-offers/by-organization/{{inn}}?isActive=false
+        name: Получение предложений1
+        meta:
+          id: req_4eaafb92cdbd40a88a85ab0538eb9285
+          created: 1765810477737
+          modified: 1765810677426
+          isPrivate: false
+          description: ""
+          sortKey: -1765794444253.5
+        method: GET
+        body:
+          mimeType: application/json
+          text: |-
+            {
+                "isActive": false
+            }
+        parameters:
+          - name: organizationId
+            value: "1027700132195"
+            disabled: true
+        headers:
+          - name: Content-Type
+            value: application/json
+        authentication:
+          type: bearer
+          disabled: false
+          token: "ekt_sk_d3f747e5dd9d78bc72de83146b26424a8bd1dd473fcb96c32c8d598dde7d2307
+            "
+          prefix: ""
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
 cookieJar:
   name: Default Jar
   meta:
@@ -684,9 +721,11 @@ cookieJar:
     created: 1765459625865
     modified: 1765459625865
 environments:
-  name: Base Environment
+  name: EKKT
   meta:
     id: env_f40427852dc594bc0b4ad8c683c8ed36abf95e61
     created: 1765459625864
-    modified: 1765459625864
+    modified: 1765807656414
     isPrivate: false
+  data:
+    inn: "000000000000"
