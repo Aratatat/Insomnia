@@ -1,0 +1,487 @@
+type: collection.insomnia.rest/5.0
+schema_version: "5.1"
+name: Фабр пополнение счета
+meta:
+  id: wrk_528b708e9ba243a5aa2d8f0f09a2226b
+  created: 1760357065008
+  modified: 1760357065008
+  description: ""
+collection:
+  - url: https://2-2-x-release.zmo.fabrtech.ru/api/wf/purchase_notice_es/copy
+    name: Создание копии у Плашина
+    meta:
+      id: req_9b880aa9550544029b87cc1c82d7e5ad
+      created: 1764152555226
+      modified: 1764155926622
+      isPrivate: false
+      description: ""
+      sortKey: -1764152555226
+    method: POST
+    body:
+      mimeType: application/json
+      text: "{}"
+    parameters:
+      - name: id
+        value: 01kazs25jew1g73d5jf6jt8sr1
+        disabled: false
+    headers:
+      - name: accept
+        value: application/json, text/plain, */*
+      - name: accept-language
+        value: ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7
+      - name: content-type
+        value: application/json
+      - name: debounce-loader-count
+        value: "100"
+      - name: origin
+        value: https://2-2-x-release.zmo.fabrtech.ru
+      - name: priority
+        value: u=1, i
+      - name: referer
+        value: https://2-2-x-release.zmo.fabrtech.ru/purchase_notice_es/view?id=01kazs25jew1g73d5jf6jt8sr1&widgets_options=%7B%22container.tabs%22:%7B%22selectedKey%22:%22generalInfo%22%7D%7D
+      - name: sec-ch-ua
+        value: '"Chromium";v="141", "Not?A_Brand";v="8"'
+      - name: sec-ch-ua-mobile
+        value: ?0
+      - name: sec-ch-ua-platform
+        value: '"Linux"'
+      - name: sec-fetch-dest
+        value: empty
+      - name: sec-fetch-mode
+        value: cors
+      - name: sec-fetch-site
+        value: same-origin
+      - name: traceparent
+        value: 00-7ab63b67ae3106d0072e0d09f8219842-eba0b58ca287ac9c-01
+      - name: user-agent
+        value: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko)
+          Chrome/141.0.0.0 Safari/537.36
+      - name: x-app-id
+        value: 604a5307-6b10-4b0a-8f37-1e7daaeda14d
+      - name: x-form-id
+        value: e4f6cc57-2dae-470b-98a8-4c3cc37285be
+      - name: Cookie
+        value: tmr_lvid=eb3ff48e344f27a29585a86364eefa24; tmr_lvidTS=1754908543289;
+          _ym_uid=1750939686120959376; _ym_d=1762520149; debug=1;
+          auth=ux78z4zWGV2Sf1O9e6h03UMKV6Y9XidnKA0JQFCvbYMsy8D74Eq1PCr_gaD9Rz1nM8wktpXbcsGU_UrGJ2-44jpMlU8JjPiSpDBn-OLikUXoT5WCKh7_mJpRE2eqLpvXVvum1KckKMXwLDxYaZUXE7MDvHZLvyS567A7_dcngmdEHCZmjmXPrdxp8D2WmG_RSVq5FQIK0ZW-zZbOQfhcOb8LTk5BI9YlZ002ucTNlUaZ0z22YUCPpNc99S-mRTNjMVtPqzDQ6KTMDzwPwlV--KPbinrhg6piwHNvt-RxcxsAgI3ZIm7UZekHtszbb7OI6WIOsLXnscNE-TbnlTQZBAJzaYUpYH9pf9ezucapNZmcS5k50qOIB_ShEfu87036Y6tmmq9MgZE7Qq1z-TGFEA;
+          _ym_isad=2;
+          x-auth-token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3NjQyMzQ1MDEsImlhbSI6ImJ5SHR0cCIsIm9yZ0lkIjoiIiwic2Vzc0lkIjoiODcwOWU1OTQtMTFlNy00YWE0LWI0OWEtOGJmOTVlOGM1NGVkIiwidWlkIjoiODUyMjYxIn0.qZP0US5odExwpSqF-plgGz5EtDahf62ixJZGh_yI-FM;
+          x-refresh-token=1e0dbb32-12be-4152-b016-bcef9f5cfa8d;
+          domain_sid=KnWho4mh9TO6zz3SW_r39%3A1764148102193; _ym_visorc=w;
+          tmr_detect=0%7C1764151823342
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://localhost:8081/fabr/getSequence
+    name: Запрос к fabr-api
+    meta:
+      id: req_45ce6a59688342e992d98e5b34671635
+      created: 1764154042143
+      modified: 1764155881685
+      isPrivate: false
+      description: ""
+      sortKey: -1764154042143
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+            "name": "procedure_id"
+        }
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: User-Agent
+        value: insomnia/12.1.0
+        description: ""
+        disabled: false
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - name: Счет Обеспечения
+    meta:
+      id: fld_b435b4f703ac499cbe37feaad624b1c0
+      created: 1760357899408
+      modified: 1764152257288
+      sortKey: -1760357898132
+      description: "[https://confluence.fabrikant.ru/pages/viewpage.action?pageId=322\
+        040503](https://confluence.fabrikant.ru/pages/viewpage.action?pageId=32\
+        2040503)"
+    children:
+      - url: "{{ _.fabrUrl }}/wallet/oauth/token"
+        name: 1. Запрос на получение токена
+        meta:
+          id: req_114436fbdfee4e1592b5ab39270616b3
+          created: 1760357899409
+          modified: 1761223142507
+          isPrivate: false
+          description: ""
+          sortKey: -1760357898131
+        method: POST
+        body:
+          mimeType: application/x-www-form-urlencoded
+          params:
+            - name: grant_type
+              value: client_credentials
+              disabled: false
+            - name: client_id
+              value: procedures
+              disabled: false
+            - name: client_secret
+              value: procedures
+              disabled: false
+        headers:
+          - name: Content-Type
+            value: application/x-www-form-urlencoded
+        scripts:
+          afterResponse: "insomnia.collectionVariables.set(\"auth\",
+            insomnia.response.json().access_token);\r
+
+            insomnia.test(\"Status code is 200\", function () {\r
+
+            \    insomnia.response.to.have.status(200);\r
+
+            });\r\n"
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{fabrUrl}}/wallet/service/api/v1/account/{{accountNumber}}/info"
+        name: Пполучение информации о ДС на счете
+        meta:
+          id: req_d9a5c544c55f479292cf04a7f284e979
+          created: 1760357899410
+          modified: 1761223641972
+          isPrivate: false
+          description: ""
+          sortKey: -1760357898130
+        method: GET
+        authentication:
+          type: bearer
+          disabled: false
+          token: "{{auth}}"
+          prefix: ""
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{fabrUrl}}/wallet/service/api/v1/firm/{{firmId}}/depositProperty/account\
+          Number"
+        name: Получение номера счета для задатков и обеспечения
+        meta:
+          id: req_19d0a2256ce64c3ebef508e50f3ecd89
+          created: 1760357899411
+          modified: 1760357899411
+          isPrivate: false
+          description: ""
+          sortKey: -1760357898129
+        method: GET
+        authentication:
+          type: bearer
+          disabled: false
+          token: "{{auth}}"
+          prefix: ""
+        scripts:
+          afterResponse: insomnia.globals.set("accountNumber",
+            insomnia.response.json().success.account);
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{fabrUrl}}/wallet/service/api/v1/firm/{{firmId}}/depositBankruptcy/accou\
+          ntNumber"
+        name: Получение номера счета для банкротства
+        meta:
+          id: req_1b3a26c77215494d93c6696c5b444014
+          created: 1760357899411
+          modified: 1760357899411
+          isPrivate: false
+          description: ""
+          sortKey: -1760357898128
+        method: GET
+        authentication:
+          type: bearer
+          disabled: false
+          token: "{{auth}}"
+          prefix: ""
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{url}}/wallet/service/api/v1/account/{{accountNumber}}}/transaction/{{tr\
+          ansaction_id}}/operation/block"
+        name: Блокирование средств
+        meta:
+          id: req_69a4859736ab4be9bedda1290e6647fe
+          created: 1760357899412
+          modified: 1760357899412
+          isPrivate: false
+          description: ""
+          sortKey: -1760357898126
+        method: POST
+        body:
+          mimeType: application/json
+          text: "{\r
+
+            \   \"accountNumber\":\"{{_['accountNumber']}}\",\r
+
+            \   \"operationType\":\"block\",\r
+
+            \   \"procedure_type\":\"1\",\r
+
+            \   \"amount\":20000,\r
+
+            \   \"destination\":\"Блокирование средств в качестве задатка для
+            процедуры 1180809-1\",\r
+
+            \   \"tags\":{\r
+
+            \   \"procedure_number\":\"1180809-1\",\r
+
+            \   \"lot_number\":\"1\",\r
+
+            \   \"procedure_url\":\"https://test.fabrikant.ru/v2/trades/procedu\
+            re/view/xlM8K13NPbMmw_GQuaLAHQ\"\r
+
+            \   },\r
+
+            \   \"transactionId\":\"{{_['transaction_id']}}\"\r
+
+            }"
+        headers:
+          - name: Content-Type
+            value: application/json
+        authentication:
+          type: bearer
+          disabled: false
+          token: "{{auth}}"
+          prefix: ""
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{ _.fabrUrl }}/wallet/service/api/v1/account/{{ _.accountNumber
+          }}/transaction/begin"
+        name: 2. Открытие транзакции
+        meta:
+          id: req_c8a33c13bdb742b8b2547a860468037d
+          created: 1760357899412
+          modified: 1761223322912
+          isPrivate: false
+          description: ""
+          sortKey: -1760357898130.5
+        method: POST
+        authentication:
+          type: bearer
+          disabled: false
+          token: "{{auth}}"
+          prefix: ""
+        scripts:
+          afterResponse: "insomnia.collectionVariables.set(\"transaction_id\",
+            insomnia.response.json().success.transactionId);\r
+
+            insomnia.test(\"Status code is 200\", function () {\r
+
+            \    insomnia.response.to.have.status(200);\r
+
+            });\r\n"
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{ _.fabrUrl }}/wallet/service/api/v1/account/{{ _.accountNumber
+          }}/transaction/{{ _.transactionId }}/operation/deposit"
+        name: 3. Пополнение счета
+        meta:
+          id: req_10d2cf96a4c444bb84b2fe62cd2a9cdb
+          created: 1760357899413
+          modified: 1763117356307
+          isPrivate: false
+          description: ""
+          sortKey: -1760357898130.25
+        method: POST
+        body:
+          mimeType: application/json
+          text: |-
+            {
+               "accountNumber": "{{ _.accountNumber }}",
+               "operationType":"deposit",
+               "procedure_type":"1",
+               "amount": 10000000000000,
+               "destination":"Пополнение счета вручную",
+               "tags":{},
+               "transactionId":"{{ _.transactionId }}"
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+        authentication:
+          type: bearer
+          disabled: false
+          token: "{{auth}}"
+          prefix: ""
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{fabrUrl}}/wallet/service/api/v1/account/{{accountNumber}}/transaction/{\
+          {transaction_id}}/operation/release"
+        name: Разблокирование средств
+        meta:
+          id: req_7ade340b7b5a4f5ea705ba669279c89c
+          created: 1760357899413
+          modified: 1760357899413
+          isPrivate: false
+          description: ""
+          sortKey: -1760357898125
+        method: POST
+        body:
+          mimeType: application/json
+          text: "{\r
+
+            \   \"accountNumber\":\"{{_['accountNumber']}}\",\r
+
+            \   \"operationType\":\"release\",\r
+
+            \   \"procedure_type\":\"1\",\r
+
+            \   \"amount\":40000,\r
+
+            \   \"destination\":\"Разлокирование средств в качестве задатка для
+            процедуры 1180809-1\",\r
+
+            \   \"tags\":{\r
+
+            \   \"procedure_number\":\"1180809-1\",\r
+
+            \   \"lot_number\":\"1\",\r
+
+            \   \"procedure_url\":\"https://test.fabrikant.ru/v2/trades/procedu\
+            re/view/xlM8K13NPbMmw_GQuaLAHQ\"\r
+
+            \   },\r
+
+            \   \"transactionId\":\"{{_['transaction_id']}}\"\r
+
+            }"
+        headers:
+          - name: Content-Type
+            value: application/json
+        authentication:
+          type: bearer
+          disabled: false
+          token: "{{auth}}"
+          prefix: ""
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{ _.fabrUrl }}/wallet/service/api/v1/account/{{ _.accountNumber
+          }}/transaction/{{ _.transactionId }}/commit"
+        name: 4. Подтверждение транзакции
+        meta:
+          id: req_386c1c30eff94751aa648b782a72af89
+          created: 1760357899414
+          modified: 1761223632687
+          isPrivate: false
+          description: ""
+          sortKey: -1760357898130.125
+        method: POST
+        authentication:
+          type: bearer
+          disabled: false
+          token: "{{auth}}"
+          prefix: ""
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{url}}/wallet/service/api/v1/account/1666677628999922/transaction/{{tran\
+          saction_id}}/rollback"
+        name: Прекращение транзакции
+        meta:
+          id: req_52d74fa7c08e4fc7a2121f19f11f2f99
+          created: 1760357899414
+          modified: 1760357899414
+          isPrivate: false
+          description: ""
+          sortKey: -1760357898122
+        method: POST
+        authentication:
+          type: bearer
+          disabled: false
+          token: "{{auth}}"
+          prefix: ""
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+    environment:
+      auth: ""
+      transaction_id: "1"
+cookieJar:
+  name: Default Jar
+  meta:
+    id: jar_e2d043c9d238859fff67212efb17cd5bab90b9fd
+    created: 1760357065015
+    modified: 1764152257278
+environments:
+  name: Base Environment
+  meta:
+    id: env_e2d043c9d238859fff67212efb17cd5bab90b9fd
+    created: 1760357065012
+    modified: 1764152257280
+    isPrivate: false
+  data:
+    auth: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE3NjQxNTIyNDcsImV4cCI6MTc2NDE1NTg1NywiYXBwIjoicHJvY2VkdXJlcyJ9.pSyQNpqpFCsfuYu0xOhVpEd83IE2Cftxd5rAHcJobnU
+    transaction_id: 019a9255-75e8-73e2-a711-1c28f6caba1f

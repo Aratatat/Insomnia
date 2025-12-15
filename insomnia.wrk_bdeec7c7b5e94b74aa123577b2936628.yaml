@@ -1,0 +1,19 @@
+type: environment.insomnia.rest/5.0
+schema_version: "5.1"
+name: My Environment
+meta:
+  id: wrk_bdeec7c7b5e94b74aa123577b2936628
+  created: 1760357128487
+  modified: 1760357128487
+  description: ""
+environments:
+  name: Fabr
+  meta:
+    id: env_09334b935bcaef0670cce3bc224bf53d2ac502ca
+    created: 1760357128489
+    modified: 1764152257284
+    isPrivate: false
+  data:
+    fabrUrl: https://fabrtech.ru
+    accountNumber: "1690437037661531"
+    transactionId: 019a9255-75e8-73e2-a711-1c28f6caba1f
