@@ -273,24 +273,25 @@ collection:
         meta:
           id: req_3415c1566efd4ac1a1e52483ca934410
           created: 1765794446334
-          modified: 1765794446334
+          modified: 1765802762361
           isPrivate: false
           description: ""
           sortKey: -1765794444258
         method: POST
         body:
           mimeType: application/json
-          text: "{\r
-
-            \    \"categoryId\": \"141c3b77-c501-4a16-9788-7cc96f38dd89\",\r
-
-            \    \"searchText\": \"Вода\",\r
-
-            \    \"limit\": 3,\r
-
-            \    \"page\": 1\r
-
-            }"
+          text: |-
+            {
+            	"catalogFilters": [
+            		{
+            			"catalogCode": "ktru",
+            			"categoryCode": "26.20.11.110-00000160"
+            		}
+            	],
+            	"catalogFilterOperator": "OR",
+            	"page": 1,
+            	"limit": 20
+            }
         parameters:
           - name: page
             value: "1"
@@ -538,6 +539,135 @@ collection:
           disabled: false
           token: "ekt_sk_d3f747e5dd9d78bc72de83146b26424a8bd1dd473fcb96c32c8d598dde7d2307
             "
+          prefix: ""
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: https://xn--e1akshg.xn--p1ai/api/gateway/v1/products/search
+        name: Получение товара ктру
+        meta:
+          id: req_2336b401441a48f7a62dae1bf16715f6
+          created: 1765802123739
+          modified: 1765802795476
+          isPrivate: false
+          description: ""
+          sortKey: -1765794444257.5
+        method: POST
+        body:
+          mimeType: application/json
+          text: "{\r
+
+            \    \"categoryId\": \"141c3b77-c501-4a16-9788-7cc96f38dd89\",\r
+
+            \    \"searchText\": \"Вода\",\r
+
+            \    \"limit\": 3,\r
+
+            \    \"page\": 1\r
+
+            }"
+        parameters:
+          - name: page
+            value: "1"
+            disabled: true
+          - name: limit
+            value: "10"
+            disabled: true
+          - name: searchText
+            value: ""
+            disabled: true
+          - name: categoryName
+            value: ""
+            disabled: true
+          - name: uintru
+            value: ""
+            disabled: true
+          - name: organizationAuthorEsiaOgrn
+            value: ""
+            disabled: true
+          - name: attributes
+            value: ""
+            disabled: true
+          - name: status
+            value: ""
+            disabled: true
+          - name: sortBy
+            value: ""
+            disabled: true
+        headers:
+          - name: Content-Type
+            value: application/json
+        authentication:
+          type: bearer
+          disabled: false
+          token: ekt_sk_d3f747e5dd9d78bc72de83146b26424a8bd1dd473fcb96c32c8d598dde7d2307
+          prefix: ""
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: https://xn--e1akshg.xn--p1ai/api/gateway/v1/products/search
+        name: Получение товара УИНТРУ
+        meta:
+          id: req_879143d75ea74fb89c0a8a8c4b59be5f
+          created: 1765802817417
+          modified: 1765803423838
+          isPrivate: false
+          description: ""
+          sortKey: -1765794444257.25
+        method: POST
+        body:
+          mimeType: application/json
+          text: |-
+            {
+            		"uintru": "UINP.07.11.06.007.00001",
+                "limit": 3,
+                "page": 1
+            }
+        parameters:
+          - name: page
+            value: "1"
+            disabled: true
+          - name: limit
+            value: "10"
+            disabled: true
+          - name: searchText
+            value: ""
+            disabled: true
+          - name: categoryName
+            value: ""
+            disabled: true
+          - name: uintru
+            value: ""
+            disabled: true
+          - name: organizationAuthorEsiaOgrn
+            value: ""
+            disabled: true
+          - name: attributes
+            value: ""
+            disabled: true
+          - name: status
+            value: ""
+            disabled: true
+          - name: sortBy
+            value: ""
+            disabled: true
+        headers:
+          - name: Content-Type
+            value: application/json
+        authentication:
+          type: bearer
+          disabled: false
+          token: ekt_sk_d3f747e5dd9d78bc72de83146b26424a8bd1dd473fcb96c32c8d598dde7d2307
           prefix: ""
         settings:
           renderRequestBody: true
