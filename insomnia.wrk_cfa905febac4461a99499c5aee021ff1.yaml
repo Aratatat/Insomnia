@@ -7,72 +7,24 @@ meta:
   modified: 1765794426388
   description: ""
 collection:
-  - url: https://2-4-x-release.zmo.fabrtech.ru/api/wf/offer_ekkt/edit
-    name: Редактирование предложения поставщика в ЕККТ
+  - url: https://xn--e1akshg.xn--p1ai/api/gateway/v1/categories/2dd2aea0-21b4-420e-bf10-91cd3bbb6dc3/attributes
+    name: Получение атрибутов категории
     meta:
-      id: req_abc6e5b03cd7473890f7a22b74af5772
-      created: 1765459932761
-      modified: 1765464212727
+      id: req_d6cb64bafbb3443192c2f62b83dd1d00
+      created: 1765794446329
+      modified: 1766497487723
       isPrivate: false
       description: ""
-      sortKey: -1765459932761
-    method: POST
-    body:
-      mimeType: application/json
-      text: '{"isActive":true,"description":"Просто
-        ЕККТ","currency":"643","vatApplicable":"withVat","vatRate":"22","quantity":5000000000,"basePrice":409.84,"basePriceWithVat":500}'
-    parameters:
-      - name: id
-        value: 01kc6sp5n06bh95a0668jw9h9y
-        disabled: false
+      sortKey: -1765459932661
+    method: GET
     headers:
-      - name: accept
-        value: application/json, text/plain, */*
-      - name: accept-language
-        value: ru,en;q=0.9
-      - name: content-type
+      - name: Content-Type
         value: application/json
-      - name: debounce-loader-count
-        value: "100"
-      - name: origin
-        value: https://2-4-x-release.zmo.fabrtech.ru
-      - name: priority
-        value: u=1, i
-      - name: referer
-        value: https://2-4-x-release.zmo.fabrtech.ru/offer_ekkt/edit?id=01kc6sp5n06bh95a0668jw9h9y
-      - name: sec-ch-ua
-        value: '"Chromium";v="140", "Not=A?Brand";v="24", "YaBrowser";v="25.10",
-          "Yowser";v="2.5"'
-      - name: sec-ch-ua-mobile
-        value: ?0
-      - name: sec-ch-ua-platform
-        value: '"Linux"'
-      - name: sec-fetch-dest
-        value: empty
-      - name: sec-fetch-mode
-        value: cors
-      - name: sec-fetch-site
-        value: same-origin
-      - name: traceparent
-        value: 00-d40b71464a5b15bc9ac935186efe9bec-23b05fe6f27fbcf1-01
-      - name: user-agent
-        value: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko)
-          Chrome/140.0.0.0 YaBrowser/25.10.0.0 Safari/537.36
-      - name: x-app-id
-        value: a15a333a-ca62-4890-9bbf-36dc9bcfde80
-      - name: x-form-id
-        value: ec4d6b1c-3f25-4783-8d76-06559051dd9c
-      - name: Cookie
-        value: _ym_uid=1755580855797321317; _ym_d=1755580855;
-          tmr_lvid=128903307d002be9ee96f92709c215dc; tmr_lvidTS=1755580855639;
-          _ga=GA1.1.1710128128.1755772088;
-          _ga_30ZBHBHC4W=GS2.1.s1756196052$o5$g1$t1756196446$j32$l0$h0; debug=1;
-          _ym_isad=2;
-          auth=ux78z4zWGV2Sf1O9e6h03Zoao_XrWBgOoGeeptnVAHZ_bikpriaPDw7DGKqk6bbndON52CzfcbvNgZ5wF4Qzw9_7LKP6RBzkSpzL5JYOh19Xz_1uHXsNJPO4dMKg4UuS68FWcjg6AP4oFJ-dTB_Q4GGuKEwbxgx0No4AWzwd5xb2idZfAQDP3sowil2p4c_BDTUHWL7OWgDwmzKnnpO3AhdrYwi4ImjcTGWbmljSrGayyo7a79QD30_lR9HjhbtHYRo7SOE_TGSAKPWynIFUOgi23kDcirSW2C4db3oALZYFLUG8soUvLuHEscg0J8vFJEzyuJaTY9VlceRJrhJN4jFSd7S3adfNShgHU7dx5gnnfjM6JRd-a0GhvnrUdEHcKakivmYn3rdpin63Ei0SIA;
-          x-auth-token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3NjU1MjQzMTIsImlhbSI6ImJ5SHR0cCIsIm9yZ0lkIjoiIiwic2Vzc0lkIjoiMzM5MDEyZjEtZTFmMS00ZmVlLWE4NWYtOGRjMzAxMWNiYjM5IiwidWlkIjoiNDExMzgifQ.x6V87CYIsCrWUxSjwp8d6eVt0OEGFvJje3l4h7Ew1vg;
-          x-refresh-token=9218a46c-a115-4267-964d-ccc62e6c25fb; _ym_visorc=b;
-          domain_sid=E8Ukyv_4zY4U_jrGKFZSb%3A1765453590142;
-          tmr_detect=0%7C1765459800900
+    authentication:
+      type: bearer
+      disabled: false
+      token: ekt_sk_d3f747e5dd9d78bc72de83146b26424a8bd1dd473fcb96c32c8d598dde7d2307
+      prefix: ""
     settings:
       renderRequestBody: true
       encodeUrl: true
@@ -81,639 +33,641 @@ collection:
         send: true
         store: true
       rebuildPath: true
-  - name: EKKT
+  - url: https://xn--e1akshg.xn--p1ai/api/gateway/v1/categories/list
+    name: Получение списка категорий
     meta:
-      id: fld_b37a66c1081049098295de4084616305
-      created: 1765794446326
-      modified: 1765794446326
-      sortKey: -1765794444264
+      id: req_a63f1ee7eec445e7b526bd1d74744933
+      created: 1765794446330
+      modified: 1766497491238
+      isPrivate: false
       description: ""
-    children:
-      - url: https://xn--e1akshg.xn--p1ai/api/gateway/v1/categories/2dd2aea0-21b4-420e-bf10-91cd3bbb6dc3/attributes
-        name: Получение атрибутов категории
-        meta:
-          id: req_d6cb64bafbb3443192c2f62b83dd1d00
-          created: 1765794446329
-          modified: 1765794446329
-          isPrivate: false
-          description: ""
-          sortKey: -1765794444263
-        method: GET
-        headers:
-          - name: Content-Type
-            value: application/json
-        authentication:
-          type: bearer
-          disabled: false
-          token: ekt_sk_d3f747e5dd9d78bc72de83146b26424a8bd1dd473fcb96c32c8d598dde7d2307
-          prefix: ""
-        settings:
-          renderRequestBody: true
-          encodeUrl: true
-          followRedirects: global
-          cookies:
-            send: true
-            store: true
-          rebuildPath: true
-      - url: https://xn--e1akshg.xn--p1ai/api/gateway/v1/categories/list
-        name: Получение списка категорий
-        meta:
-          id: req_a63f1ee7eec445e7b526bd1d74744933
-          created: 1765794446330
-          modified: 1765794446330
-          isPrivate: false
-          description: ""
-          sortKey: -1765794444262
-        method: GET
-        parameters:
-          - name: page
-            value: "1"
-            disabled: true
-          - name: limit
-            value: "10"
-            disabled: true
-          - name: search
-            value: Всё для офиса, офисная мебель, канцелярские товары
-            disabled: true
-          - name: parentCode
-            value: 0173-1#01-AKF228#013
-            disabled: false
-        headers:
-          - name: Content-Type
-            value: application/json
-        authentication:
-          type: bearer
-          disabled: false
-          token: ekt_sk_d3f747e5dd9d78bc72de83146b26424a8bd1dd473fcb96c32c8d598dde7d2307
-          prefix: ""
-        settings:
-          renderRequestBody: true
-          encodeUrl: true
-          followRedirects: global
-          cookies:
-            send: true
-            store: true
-          rebuildPath: true
-      - url: https://xn--e1akshg.xn--p1ai/api/gateway/v1/categories/list
-        name: Получение списка справочников
-        meta:
-          id: req_05d5fcdca98e42819691d2cd5b0697bf
-          created: 1765794446331
-          modified: 1765794446331
-          isPrivate: false
-          description: ""
-          sortKey: -1765794444261
-        method: GET
-        parameters:
-          - name: page
-            value: "1"
-            disabled: true
-          - name: limit
-            value: "10"
-            disabled: true
-          - name: search
-            value: Всё для офиса, офисная мебель, канцелярские товары
-            disabled: true
-          - name: parentCode
-            value: 0173-1#01-AKF228#013
-            disabled: false
-        headers:
-          - name: Content-Type
-            value: application/json
-        authentication:
-          type: bearer
-          disabled: false
-          token: ekt_sk_d3f747e5dd9d78bc72de83146b26424a8bd1dd473fcb96c32c8d598dde7d2307
-          prefix: ""
-        settings:
-          renderRequestBody: true
-          encodeUrl: true
-          followRedirects: global
-          cookies:
-            send: true
-            store: true
-          rebuildPath: true
-      - url: https://xn--e1akshg.xn--p1ai/api/gateway/v1/categories/reference-books/5a6f08c0-4e1d-46f6-a5fb-06ce4d559650/values
-        name: Получение значений справочников
-        meta:
-          id: req_d84e8d048b91464da4835430838bdb1c
-          created: 1765794446332
-          modified: 1765794446332
-          isPrivate: false
-          description: ""
-          sortKey: -1765794444260
-        method: GET
-        parameters:
-          - name: page
-            value: "1"
-            disabled: true
-          - name: limit
-            value: "10"
-            disabled: true
-          - name: search
-            value: Всё для офиса, офисная мебель, канцелярские товары
-            disabled: true
-        headers:
-          - name: Content-Type
-            value: application/json
-        authentication:
-          type: bearer
-          disabled: false
-          token: ekt_sk_d3f747e5dd9d78bc72de83146b26424a8bd1dd473fcb96c32c8d598dde7d2307
-          prefix: ""
-        settings:
-          renderRequestBody: true
-          encodeUrl: true
-          followRedirects: global
-          cookies:
-            send: true
-            store: true
-          rebuildPath: true
-      - url: https://xn--e1akshg.xn--p1ai/api/gateway/v1/categories/141c3b77-c501-4a16-9788-7cc96f38dd89/attributes/10e32335-32b8-4936-a513-0a9a9152159b/values
-        name: Получение значений справочных полей
-        meta:
-          id: req_f58167503f1840c78795be0769e5bdfe
-          created: 1765794446333
-          modified: 1765794446333
-          isPrivate: false
-          description: ""
-          sortKey: -1765794444259
-        method: GET
-        parameters:
-          - name: limit
-            value: "10"
-            disabled: true
-          - name: search
-            value: ""
-            disabled: true
-          - name: offset
-            value: "0"
-            disabled: true
-          - name: parentId
-            value: ""
-            disabled: true
-        headers:
-          - name: Content-Type
-            value: application/json
-        authentication:
-          type: bearer
-          disabled: false
-          token: ekt_sk_d3f747e5dd9d78bc72de83146b26424a8bd1dd473fcb96c32c8d598dde7d2307
-          prefix: ""
-        settings:
-          renderRequestBody: true
-          encodeUrl: true
-          followRedirects: global
-          cookies:
-            send: true
-            store: true
-          rebuildPath: true
-      - url: https://xn--e1akshg.xn--p1ai/api/gateway/v1/products/search
-        name: Получение товаров
-        meta:
-          id: req_3415c1566efd4ac1a1e52483ca934410
-          created: 1765794446334
-          modified: 1765802762361
-          isPrivate: false
-          description: ""
-          sortKey: -1765794444258
-        method: POST
-        body:
-          mimeType: application/json
-          text: |-
-            {
-            	"catalogFilters": [
-            		{
-            			"catalogCode": "ktru",
-            			"categoryCode": "26.20.11.110-00000160"
-            		}
-            	],
-            	"catalogFilterOperator": "OR",
-            	"page": 1,
-            	"limit": 20
-            }
-        parameters:
-          - name: page
-            value: "1"
-            disabled: true
-          - name: limit
-            value: "10"
-            disabled: true
-          - name: searchText
-            value: ""
-            disabled: true
-          - name: categoryName
-            value: ""
-            disabled: true
-          - name: uintru
-            value: ""
-            disabled: true
-          - name: organizationAuthorEsiaOgrn
-            value: ""
-            disabled: true
-          - name: attributes
-            value: ""
-            disabled: true
-          - name: status
-            value: ""
-            disabled: true
-          - name: sortBy
-            value: ""
-            disabled: true
-        headers:
-          - name: Content-Type
-            value: application/json
-        authentication:
-          type: bearer
-          disabled: false
-          token: ekt_sk_d3f747e5dd9d78bc72de83146b26424a8bd1dd473fcb96c32c8d598dde7d2307
-          prefix: ""
-        settings:
-          renderRequestBody: true
-          encodeUrl: true
-          followRedirects: global
-          cookies:
-            send: true
-            store: true
-          rebuildPath: true
-      - url: https://xn--e1akshg.xn--p1ai/api/gateway/v1/supplier-offers
-        name: Создание контракта
-        meta:
-          id: req_7554460089ad4afdb5b66108c0b2ca84
-          created: 1765794446334
-          modified: 1765794446334
-          isPrivate: false
-          description: ""
-          sortKey: -1765794444257
-        method: POST
-        body:
-          mimeType: application/json
-          text: "\r
+      sortKey: -1765459932561
+    method: GET
+    parameters:
+      - name: page
+        value: "1"
+        disabled: true
+      - name: limit
+        value: "10"
+        disabled: true
+      - name: search
+        value: Всё для офиса, офисная мебель, канцелярские товары
+        disabled: true
+      - name: parentCode
+        value: 0173-1#01-AKF228#013
+        disabled: false
+    headers:
+      - name: Content-Type
+        value: application/json
+    authentication:
+      type: bearer
+      disabled: false
+      token: ekt_sk_d3f747e5dd9d78bc72de83146b26424a8bd1dd473fcb96c32c8d598dde7d2307
+      prefix: ""
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: https://xn--e1akshg.xn--p1ai/api/gateway/v1/categories/list
+    name: Получение списка справочников
+    meta:
+      id: req_05d5fcdca98e42819691d2cd5b0697bf
+      created: 1765794446331
+      modified: 1766497538028
+      isPrivate: false
+      description: ""
+      sortKey: -1765459932736
+    method: GET
+    parameters:
+      - name: page
+        value: "1"
+        disabled: true
+      - name: limit
+        value: "10"
+        disabled: true
+      - name: search
+        value: Всё для офиса, офисная мебель, канцелярские товары
+        disabled: true
+      - name: parentCode
+        value: 0173-1#01-AKF228#013
+        disabled: false
+    headers:
+      - name: Content-Type
+        value: application/json
+    authentication:
+      type: bearer
+      disabled: false
+      token: ekt_sk_d3f747e5dd9d78bc72de83146b26424a8bd1dd473fcb96c32c8d598dde7d2307
+      prefix: ""
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: https://xn--e1akshg.xn--p1ai/api/gateway/v1/categories/reference-books/5a6f08c0-4e1d-46f6-a5fb-06ce4d559650/values
+    name: Получение значений справочников
+    meta:
+      id: req_d84e8d048b91464da4835430838bdb1c
+      created: 1765794446332
+      modified: 1766497536460
+      isPrivate: false
+      description: ""
+      sortKey: -1765459932711
+    method: GET
+    parameters:
+      - name: page
+        value: "1"
+        disabled: true
+      - name: limit
+        value: "10"
+        disabled: true
+      - name: search
+        value: Всё для офиса, офисная мебель, канцелярские товары
+        disabled: true
+    headers:
+      - name: Content-Type
+        value: application/json
+    authentication:
+      type: bearer
+      disabled: false
+      token: ekt_sk_d3f747e5dd9d78bc72de83146b26424a8bd1dd473fcb96c32c8d598dde7d2307
+      prefix: ""
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: https://xn--e1akshg.xn--p1ai/api/gateway/v1/categories/141c3b77-c501-4a16-9788-7cc96f38dd89/attributes/10e32335-32b8-4936-a513-0a9a9152159b/values
+    name: Получение значений справочных полей
+    meta:
+      id: req_f58167503f1840c78795be0769e5bdfe
+      created: 1765794446333
+      modified: 1766497530930
+      isPrivate: false
+      description: ""
+      sortKey: -1765459932510.6094
+    method: GET
+    parameters:
+      - name: limit
+        value: "10"
+        disabled: true
+      - name: search
+        value: ""
+        disabled: true
+      - name: offset
+        value: "0"
+        disabled: true
+      - name: parentId
+        value: ""
+        disabled: true
+    headers:
+      - name: Content-Type
+        value: application/json
+    authentication:
+      type: bearer
+      disabled: false
+      token: ekt_sk_d3f747e5dd9d78bc72de83146b26424a8bd1dd473fcb96c32c8d598dde7d2307
+      prefix: ""
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: https://xn--e1akshg.xn--p1ai/api/gateway/v1/products/search
+    name: Получение товаров
+    meta:
+      id: req_3415c1566efd4ac1a1e52483ca934410
+      created: 1765794446334
+      modified: 1766497600046
+      isPrivate: false
+      description: ""
+      sortKey: -1765459932754.75
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"catalogFilters": [
+        		{
+        			"catalogCode": "ktru",
+        			"categoryCode": "26.20.11.110-00000160"
+        		}
+        	],
+        	"catalogFilterOperator": "OR",
+        	"page": 1,
+        	"limit": 20
+        }
+    parameters:
+      - name: page
+        value: "1"
+        disabled: true
+      - name: limit
+        value: "10"
+        disabled: true
+      - name: searchText
+        value: ""
+        disabled: true
+      - name: categoryName
+        value: ""
+        disabled: true
+      - name: uintru
+        value: ""
+        disabled: true
+      - name: organizationAuthorEsiaOgrn
+        value: ""
+        disabled: true
+      - name: attributes
+        value: ""
+        disabled: true
+      - name: status
+        value: ""
+        disabled: true
+      - name: sortBy
+        value: ""
+        disabled: true
+    headers:
+      - name: Content-Type
+        value: application/json
+    authentication:
+      type: bearer
+      disabled: false
+      token: ekt_sk_d3f747e5dd9d78bc72de83146b26424a8bd1dd473fcb96c32c8d598dde7d2307
+      prefix: ""
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: https://xn--e1akshg.xn--p1ai/api/gateway/v1/supplier-offers
+    name: Создание контракта
+    meta:
+      id: req_7554460089ad4afdb5b66108c0b2ca84
+      created: 1765794446334
+      modified: 1766497589185
+      isPrivate: false
+      description: ""
+      sortKey: -1765459932773.5
+    method: POST
+    body:
+      mimeType: application/json
+      text: "\r
 
-            {\r
+        {\r
 
-            \    \"uintru\": \"UINTRU_1761077561931929597\",\r
+        \    \"uintru\": \"UINTRU_1761077561931929597\",\r
 
-            \    \"esiaOgrn\": \"1027700132195\",\r
+        \    \"esiaOgrn\": \"1027700132195\",\r
 
-            \    \"basePrice\": 1500.00,\r
+        \    \"basePrice\": 1500.00,\r
 
-            \    \"currency\": \"RUB\",\r
+        \    \"currency\": \"RUB\",\r
 
-            \    \"vatRate\": \"11\",\r
+        \    \"vatRate\": \"11\",\r
 
-            \    \"quantity\": 100,\r
+        \    \"quantity\": 100,\r
 
-            \    \"warranty\": 12,\r
+        \    \"warranty\": 12,\r
 
-            \    \"description\": \"Высококачественная вода для офисов\"\r
+        \    \"description\": \"Высококачественная вода для офисов\"\r
 
-            \  }"
-        headers:
-          - name: Content-Type
-            value: application/json
-        authentication:
-          type: bearer
-          disabled: false
-          token: "ekt_sk_d3f747e5dd9d78bc72de83146b26424a8bd1dd473fcb96c32c8d598dde7d2307
-            "
-          prefix: ""
-        settings:
-          renderRequestBody: true
-          encodeUrl: true
-          followRedirects: global
-          cookies:
-            send: true
-            store: true
-          rebuildPath: true
-      - url: https://xn--e1akshg.xn--p1ai/api/gateway/v1/supplier-offers/1386fbc3-4825-40ce-bd86-e5ac13c5d693
-        name: Обновление предложения ЕККТ
-        meta:
-          id: req_4a399f400413448eb7748f32bf078a66
-          created: 1765794446335
-          modified: 1765794446335
-          isPrivate: false
-          description: ""
-          sortKey: -1765794444255
-        method: PUT
-        body:
-          mimeType: application/json
-          text: "\r
+        \  }"
+    headers:
+      - name: Content-Type
+        value: application/json
+    authentication:
+      type: bearer
+      disabled: false
+      token: "ekt_sk_d3f747e5dd9d78bc72de83146b26424a8bd1dd473fcb96c32c8d598dde7d2307
+        "
+      prefix: ""
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: https://xn--e1akshg.xn--p1ai/api/gateway/v1/supplier-offers/4b146251-f782-4e51-a37a-285eee86e1f8
+    name: Редактирование предложения ЕККТ
+    meta:
+      id: req_4a399f400413448eb7748f32bf078a66
+      created: 1765794446335
+      modified: 1766504082528
+      isPrivate: false
+      description: ""
+      sortKey: -1765459932886
+    method: PUT
+    body:
+      mimeType: application/json
+      text: |
+        {
+        	"isActive": true,
+        	"description": "Новое предложение",
+        	"currency": "643",
+        	"vatRate": "exempt",
+        	"quantity": 100,
+        	"basePrice": 77
+        }
+    headers:
+      - name: Content-Type
+        value: application/json
+    authentication:
+      type: bearer
+      disabled: false
+      token: "ekt_sk_d3f747e5dd9d78bc72de83146b26424a8bd1dd473fcb96c32c8d598dde7d2307
+        "
+      prefix: ""
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: https://xn--e1akshg.xn--p1ai/api/gateway/v1/supplier-offers
+    name: Создание предложения ЕККТ
+    meta:
+      id: req_7d77e0bed7b14ccdade2165eab9c8d13
+      created: 1765794446335
+      modified: 1766500278748
+      isPrivate: false
+      description: ""
+      sortKey: -1765459932961
+    method: POST
+    body:
+      mimeType: application/json
+      text: "\r
 
-            {\r
+        {\r
 
-            \    \"uintru\": \"UINTRU_1761077561931929597\",\r
+        \    \"uintru\": \"UINTRU_1761077561931929597\",\r
 
-            \    \"esiaOgrn\": \"1027700132195\",\r
+        \    \"esiaOgrn\": \"1027700132195\",\r
 
-            \    \"basePrice\": 1600.00,\r
+        \    \"basePrice\": 1500.00,\r
 
-            \    \"currency\": \"RUB\",\r
+        \    \"currency\": \"RUB\",\r
 
-            \    \"vatRate\": \"11\",\r
+        \    \"vatRate\": \"11\",\r
 
-            \    \"quantity\": 100,\r
+        \    \"quantity\": 100,\r
 
-            \    \"warranty\": 12,\r
+        \    \"warranty\": 12,\r
 
-            \    \"description\": \"Высококачественная вода для офисов\"\r
+        \    \"description\": \"Высококачественная вода для офисов\"\r
 
-            }"
-        headers:
-          - name: Content-Type
-            value: application/json
-        authentication:
-          type: bearer
-          disabled: false
-          token: "ekt_sk_d3f747e5dd9d78bc72de83146b26424a8bd1dd473fcb96c32c8d598dde7d2307
-            "
-          prefix: ""
-        settings:
-          renderRequestBody: true
-          encodeUrl: true
-          followRedirects: global
-          cookies:
-            send: true
-            store: true
-          rebuildPath: true
-      - url: https://xn--e1akshg.xn--p1ai/api/gateway/v1/supplier-offers
-        name: Создание предложения ЕККТ
-        meta:
-          id: req_7d77e0bed7b14ccdade2165eab9c8d13
-          created: 1765794446335
-          modified: 1765794662927
-          isPrivate: false
-          description: ""
-          sortKey: -1765794444256
-        method: POST
-        body:
-          mimeType: application/json
-          text: "\r
+        \  }"
+    headers:
+      - name: Content-Type
+        value: application/json
+    authentication:
+      type: bearer
+      disabled: false
+      token: "ekt_sk_d3f747e5dd9d78bc72de83146b26424a8bd1dd473fcb96c32c8d598dde7d2307
+        "
+      prefix: ""
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: https://xn--e1akshg.xn--p1ai/api/gateway/v1/supplier-offers/91261ede-8d88-4f98-9f5c-fb4482ba4699
+    name: Удаление предложение ЕККТ
+    meta:
+      id: req_260b3f01e1bb4e518ea4f645f8460a23
+      created: 1765794446336
+      modified: 1766497504840
+      isPrivate: false
+      description: ""
+      sortKey: -1765459932461
+    method: DELETE
+    authentication:
+      type: bearer
+      disabled: false
+      token: "ekt_sk_d3f747e5dd9d78bc72de83146b26424a8bd1dd473fcb96c32c8d598dde7d2307
+        "
+      prefix: ""
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: https://xn--e1akshg.xn--p1ai/api/gateway/v1/supplier-offers/by-organization/3105239060363
+    name: Получение предложений
+    meta:
+      id: req_f7c0078fe3de4484a272736fc3f1963c
+      created: 1765794446336
+      modified: 1766500531429
+      isPrivate: false
+      description: ""
+      sortKey: -1765459932861
+    method: GET
+    body:
+      mimeType: application/json
+      text: |-
+        {
+            //"uintru":"UINP.07.11.06.007.00001",
+        		//"isActive": false
+        }
+    parameters:
+      - name: organizationId
+        value: "1027700132195"
+        disabled: true
+    headers:
+      - name: Content-Type
+        value: application/json
+    authentication:
+      type: bearer
+      disabled: false
+      token: "ekt_sk_d3f747e5dd9d78bc72de83146b26424a8bd1dd473fcb96c32c8d598dde7d2307
+        "
+      prefix: ""
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: https://xn--e1akshg.xn--p1ai/api/gateway/v1/products/search
+    name: Получение товара ктру
+    meta:
+      id: req_2336b401441a48f7a62dae1bf16715f6
+      created: 1765802123739
+      modified: 1766497601881
+      isPrivate: false
+      description: ""
+      sortKey: -1765459932745.375
+    method: POST
+    body:
+      mimeType: application/json
+      text: "{\r
 
-            {\r
+        \    \"categoryId\": \"141c3b77-c501-4a16-9788-7cc96f38dd89\",\r
 
-            \    \"uintru\": \"UINTRU_1761077561931929597\",\r
+        \    \"searchText\": \"Вода\",\r
 
-            \    \"esiaOgrn\": \"1027700132195\",\r
+        \    \"limit\": 3,\r
 
-            \    \"basePrice\": 1500.00,\r
+        \    \"page\": 1\r
 
-            \    \"currency\": \"RUB\",\r
+        }"
+    parameters:
+      - name: page
+        value: "1"
+        disabled: true
+      - name: limit
+        value: "10"
+        disabled: true
+      - name: searchText
+        value: ""
+        disabled: true
+      - name: categoryName
+        value: ""
+        disabled: true
+      - name: uintru
+        value: ""
+        disabled: true
+      - name: organizationAuthorEsiaOgrn
+        value: ""
+        disabled: true
+      - name: attributes
+        value: ""
+        disabled: true
+      - name: status
+        value: ""
+        disabled: true
+      - name: sortBy
+        value: ""
+        disabled: true
+    headers:
+      - name: Content-Type
+        value: application/json
+    authentication:
+      type: bearer
+      disabled: false
+      token: ekt_sk_d3f747e5dd9d78bc72de83146b26424a8bd1dd473fcb96c32c8d598dde7d2307
+      prefix: ""
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: https://xn--e1akshg.xn--p1ai/api/gateway/v1/products/search
+    name: Получение товара УИНТРУ
+    meta:
+      id: req_879143d75ea74fb89c0a8a8c4b59be5f
+      created: 1765802817417
+      modified: 1766497603611
+      isPrivate: false
+      description: ""
+      sortKey: -1765459932740.6875
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        		"uintru": "UINP.07.11.06.007.00001",
+            "limit": 3,
+            "page": 1
+        }
+    parameters:
+      - name: page
+        value: "1"
+        disabled: true
+      - name: limit
+        value: "10"
+        disabled: true
+      - name: searchText
+        value: ""
+        disabled: true
+      - name: categoryName
+        value: ""
+        disabled: true
+      - name: uintru
+        value: ""
+        disabled: true
+      - name: organizationAuthorEsiaOgrn
+        value: ""
+        disabled: true
+      - name: attributes
+        value: ""
+        disabled: true
+      - name: status
+        value: ""
+        disabled: true
+      - name: sortBy
+        value: ""
+        disabled: true
+    headers:
+      - name: Content-Type
+        value: application/json
+    authentication:
+      type: bearer
+      disabled: false
+      token: ekt_sk_d3f747e5dd9d78bc72de83146b26424a8bd1dd473fcb96c32c8d598dde7d2307
+      prefix: ""
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: https://xn--e1akshg.xn--p1ai/api/gateway/v1/supplier-offers/by-organization/3105239060363
+    name: Получение предложений1
+    meta:
+      id: req_4eaafb92cdbd40a88a85ab0538eb9285
+      created: 1765810477737
+      modified: 1766500542341
+      isPrivate: false
+      description: ""
+      sortKey: -1765459932811
+    method: GET
+    body:
+      mimeType: application/json
+      text: |-
+        {
+            "isActive": false
+        }
+    parameters:
+      - name: organizationId
+        value: "1027700132195"
+        disabled: true
+    headers:
+      - name: Content-Type
+        value: application/json
+    authentication:
+      type: bearer
+      disabled: false
+      token: "ekt_sk_d3f747e5dd9d78bc72de83146b26424a8bd1dd473fcb96c32c8d598dde7d2307
+        "
+      prefix: ""
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: https://xn--e1akshg.xn--p1ai/api/gateway/v1/supplier-offers/4b146251-f782-4e51-a37a-285eee86e1f8
+    name: Редактирование предложения ЕККТ * 1100
+    meta:
+      id: req_2944dfb2403340e9bdc2a54313ca19ad
+      created: 1766504073870
+      modified: 1766505045746
+      isPrivate: false
+      description: ""
+      sortKey: -1765459932873.5
+    method: PUT
+    body:
+      mimeType: application/json
+      text: |
+        {
+        	"isActive": true,
+        	"description": "Новое предложение",
+        	"currency": "643",
+        	"vatRate": "exempt",
+        	"quantity": 100,
+        	"basePrice": {{ counter }}
+        }
+    headers:
+      - name: Content-Type
+        value: application/json
+    authentication:
+      type: bearer
+      disabled: false
+      token: "ekt_sk_d3f747e5dd9d78bc72de83146b26424a8bd1dd473fcb96c32c8d598dde7d2307
+        "
+      prefix: ""
+    scripts:
+      preRequest: >
+        let counter = parseInt(insomnia.collectionVariables.get("counter") ||
+        "0");
 
-            \    \"vatRate\": \"11\",\r
+        counter += 1;
 
-            \    \"quantity\": 100,\r
+        insomnia.collectionVariables.set("counter", counter.toString());
 
-            \    \"warranty\": 12,\r
-
-            \    \"description\": \"Высококачественная вода для офисов\"\r
-
-            \  }"
-        headers:
-          - name: Content-Type
-            value: application/json
-        authentication:
-          type: bearer
-          disabled: false
-          token: "ekt_sk_d3f747e5dd9d78bc72de83146b26424a8bd1dd473fcb96c32c8d598dde7d2307
-            "
-          prefix: ""
-        settings:
-          renderRequestBody: true
-          encodeUrl: true
-          followRedirects: global
-          cookies:
-            send: true
-            store: true
-          rebuildPath: true
-      - url: https://xn--e1akshg.xn--p1ai/api/gateway/v1/supplier-offers/91261ede-8d88-4f98-9f5c-fb4482ba4699
-        name: Удаление предложение ЕККТ
-        meta:
-          id: req_260b3f01e1bb4e518ea4f645f8460a23
-          created: 1765794446336
-          modified: 1765807109228
-          isPrivate: false
-          description: ""
-          sortKey: -1765794444253
-        method: DELETE
-        authentication:
-          type: bearer
-          disabled: false
-          token: "ekt_sk_d3f747e5dd9d78bc72de83146b26424a8bd1dd473fcb96c32c8d598dde7d2307
-            "
-          prefix: ""
-        settings:
-          renderRequestBody: true
-          encodeUrl: true
-          followRedirects: global
-          cookies:
-            send: true
-            store: true
-          rebuildPath: true
-      - url: https://xn--e1akshg.xn--p1ai/api/gateway/v1/supplier-offers/by-organization/{{inn}}?isActive=true
-        name: Получение предложений
-        meta:
-          id: req_f7c0078fe3de4484a272736fc3f1963c
-          created: 1765794446336
-          modified: 1765810843810
-          isPrivate: false
-          description: ""
-          sortKey: -1765794444254
-        method: GET
-        body:
-          mimeType: application/json
-          text: |-
-            {
-                //"uintru":"UINP.07.11.06.007.00001",
-            		//"isActive": false
-            }
-        parameters:
-          - name: organizationId
-            value: "1027700132195"
-            disabled: true
-        headers:
-          - name: Content-Type
-            value: application/json
-        authentication:
-          type: bearer
-          disabled: false
-          token: "ekt_sk_d3f747e5dd9d78bc72de83146b26424a8bd1dd473fcb96c32c8d598dde7d2307
-            "
-          prefix: ""
-        settings:
-          renderRequestBody: true
-          encodeUrl: true
-          followRedirects: global
-          cookies:
-            send: true
-            store: true
-          rebuildPath: true
-      - url: https://xn--e1akshg.xn--p1ai/api/gateway/v1/products/search
-        name: Получение товара ктру
-        meta:
-          id: req_2336b401441a48f7a62dae1bf16715f6
-          created: 1765802123739
-          modified: 1765802795476
-          isPrivate: false
-          description: ""
-          sortKey: -1765794444257.5
-        method: POST
-        body:
-          mimeType: application/json
-          text: "{\r
-
-            \    \"categoryId\": \"141c3b77-c501-4a16-9788-7cc96f38dd89\",\r
-
-            \    \"searchText\": \"Вода\",\r
-
-            \    \"limit\": 3,\r
-
-            \    \"page\": 1\r
-
-            }"
-        parameters:
-          - name: page
-            value: "1"
-            disabled: true
-          - name: limit
-            value: "10"
-            disabled: true
-          - name: searchText
-            value: ""
-            disabled: true
-          - name: categoryName
-            value: ""
-            disabled: true
-          - name: uintru
-            value: ""
-            disabled: true
-          - name: organizationAuthorEsiaOgrn
-            value: ""
-            disabled: true
-          - name: attributes
-            value: ""
-            disabled: true
-          - name: status
-            value: ""
-            disabled: true
-          - name: sortBy
-            value: ""
-            disabled: true
-        headers:
-          - name: Content-Type
-            value: application/json
-        authentication:
-          type: bearer
-          disabled: false
-          token: ekt_sk_d3f747e5dd9d78bc72de83146b26424a8bd1dd473fcb96c32c8d598dde7d2307
-          prefix: ""
-        settings:
-          renderRequestBody: true
-          encodeUrl: true
-          followRedirects: global
-          cookies:
-            send: true
-            store: true
-          rebuildPath: true
-      - url: https://xn--e1akshg.xn--p1ai/api/gateway/v1/products/search
-        name: Получение товара УИНТРУ
-        meta:
-          id: req_879143d75ea74fb89c0a8a8c4b59be5f
-          created: 1765802817417
-          modified: 1765803423838
-          isPrivate: false
-          description: ""
-          sortKey: -1765794444257.25
-        method: POST
-        body:
-          mimeType: application/json
-          text: |-
-            {
-            		"uintru": "UINP.07.11.06.007.00001",
-                "limit": 3,
-                "page": 1
-            }
-        parameters:
-          - name: page
-            value: "1"
-            disabled: true
-          - name: limit
-            value: "10"
-            disabled: true
-          - name: searchText
-            value: ""
-            disabled: true
-          - name: categoryName
-            value: ""
-            disabled: true
-          - name: uintru
-            value: ""
-            disabled: true
-          - name: organizationAuthorEsiaOgrn
-            value: ""
-            disabled: true
-          - name: attributes
-            value: ""
-            disabled: true
-          - name: status
-            value: ""
-            disabled: true
-          - name: sortBy
-            value: ""
-            disabled: true
-        headers:
-          - name: Content-Type
-            value: application/json
-        authentication:
-          type: bearer
-          disabled: false
-          token: ekt_sk_d3f747e5dd9d78bc72de83146b26424a8bd1dd473fcb96c32c8d598dde7d2307
-          prefix: ""
-        settings:
-          renderRequestBody: true
-          encodeUrl: true
-          followRedirects: global
-          cookies:
-            send: true
-            store: true
-          rebuildPath: true
-      - url: https://xn--e1akshg.xn--p1ai/api/gateway/v1/supplier-offers/by-organization/{{inn}}?isActive=false
-        name: Получение предложений1
-        meta:
-          id: req_4eaafb92cdbd40a88a85ab0538eb9285
-          created: 1765810477737
-          modified: 1765810677426
-          isPrivate: false
-          description: ""
-          sortKey: -1765794444253.5
-        method: GET
-        body:
-          mimeType: application/json
-          text: |-
-            {
-                "isActive": false
-            }
-        parameters:
-          - name: organizationId
-            value: "1027700132195"
-            disabled: true
-        headers:
-          - name: Content-Type
-            value: application/json
-        authentication:
-          type: bearer
-          disabled: false
-          token: "ekt_sk_d3f747e5dd9d78bc72de83146b26424a8bd1dd473fcb96c32c8d598dde7d2307
-            "
-          prefix: ""
-        settings:
-          renderRequestBody: true
-          encodeUrl: true
-          followRedirects: global
-          cookies:
-            send: true
-            store: true
-          rebuildPath: true
+        console.log(`Итерация Runner: ${counter}`);
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
 cookieJar:
   name: Default Jar
   meta:
@@ -725,7 +679,8 @@ environments:
   meta:
     id: env_f40427852dc594bc0b4ad8c683c8ed36abf95e61
     created: 1765459625864
-    modified: 1765807656414
+    modified: 1766504179711
     isPrivate: false
   data:
     inn: "000000000000"
+    counter: "0"
