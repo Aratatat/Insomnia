@@ -309,7 +309,7 @@ collection:
     meta:
       id: req_4a399f400413448eb7748f32bf078a66
       created: 1765794446335
-      modified: 1766504082528
+      modified: 1766561319682
       isPrivate: false
       description: ""
       sortKey: -1765459932886
@@ -421,7 +421,7 @@ collection:
     meta:
       id: req_f7c0078fe3de4484a272736fc3f1963c
       created: 1765794446336
-      modified: 1766500531429
+      modified: 1766561761873
       isPrivate: false
       description: ""
       sortKey: -1765459932861
@@ -446,6 +446,13 @@ collection:
       token: "ekt_sk_d3f747e5dd9d78bc72de83146b26424a8bd1dd473fcb96c32c8d598dde7d2307
         "
       prefix: ""
+    scripts:
+      afterResponse: |+
+        
+        insomnia.test('Check if status is 200', () => {
+            insomnia.expect(insomnia.response.code).to.eql(200);
+        });
+
     settings:
       renderRequestBody: true
       encodeUrl: true
@@ -621,11 +628,11 @@ collection:
         store: true
       rebuildPath: true
   - url: https://xn--e1akshg.xn--p1ai/api/gateway/v1/supplier-offers/4b146251-f782-4e51-a37a-285eee86e1f8
-    name: Редактирование предложения ЕККТ * 1100
+    name: Edit auto
     meta:
       id: req_2944dfb2403340e9bdc2a54313ca19ad
       created: 1766504073870
-      modified: 1766505045746
+      modified: 1766514560284
       isPrivate: false
       description: ""
       sortKey: -1765459932873.5
@@ -651,15 +658,11 @@ collection:
         "
       prefix: ""
     scripts:
-      preRequest: >
-        let counter = parseInt(insomnia.collectionVariables.get("counter") ||
-        "0");
+      afterResponse: |+
+        insomnia.test('Check if status is 200', () => {
+            insomnia.expect(insomnia.response.code).to.eql(200);
+        });
 
-        counter += 1;
-
-        insomnia.collectionVariables.set("counter", counter.toString());
-
-        console.log(`Итерация Runner: ${counter}`);
     settings:
       renderRequestBody: true
       encodeUrl: true
@@ -673,14 +676,15 @@ cookieJar:
   meta:
     id: jar_f40427852dc594bc0b4ad8c683c8ed36abf95e61
     created: 1765459625865
-    modified: 1765459625865
+    modified: 1766561998315
 environments:
   name: EKKT
   meta:
     id: env_f40427852dc594bc0b4ad8c683c8ed36abf95e61
     created: 1765459625864
-    modified: 1766504179711
+    modified: 1766561998320
     isPrivate: false
   data:
     inn: "000000000000"
-    counter: "0"
+    counter: "100"
+    "success_count ": "0"
